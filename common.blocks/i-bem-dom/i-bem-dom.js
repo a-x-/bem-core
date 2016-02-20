@@ -7,6 +7,7 @@ modules.define(
     [
         'i-bem',
         'i-bem__internal',
+        'i-bem__collection',
         'i-bem-dom__events_type_dom',
         'i-bem-dom__events_type_bem',
         'inherit',
@@ -20,6 +21,7 @@ modules.define(
         provide,
         bem,
         bemInternal,
+        bemCollection,
         domEvents,
         bemEvents,
         inherit,
@@ -545,7 +547,7 @@ var BemDomEntity = inherit(/** @lends BemDomEntity.prototype */{
             }
         });
 
-        return res;
+        return new bemCollection(res);
     },
 
     /**
